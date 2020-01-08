@@ -1,3 +1,16 @@
+@mixin headingGenerator($sizeRem) {
+    @for $i from 1 through 6 {
+        h#{$i} {
+            font-size: $sizeRem;
+        }
+        @if $i <= 2 {
+            $sizeRem: $sizeRem - 0.50rem;
+        } @else {
+            $sizeRem: $sizeRem - 0.25rem;
+        }
+    }
+}
+
 @mixin box-shadow($arguments) {
 	-webkit-box-shadow: $arguments;
 	-moz-box-shadow: $arguments;

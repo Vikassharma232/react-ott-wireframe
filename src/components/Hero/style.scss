@@ -1,0 +1,64 @@
+@import '../../scss/globals/all.scss';
+
+.hero {
+    @extend %flex;
+    position: relative;
+    flex-direction: column;
+    padding: 4rem;
+    color: hsl(0, 0%, 100%);
+    .media-img {
+        @extend %fullfill;
+        background-color: hsl(0, 0%, 30%);
+        z-index: -1;
+    }
+    .info {
+        padding-top: 12rem;
+        padding-bottom: 2rem;
+        flex: 0.5;
+        .media-featured {
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+        .media-title {
+            line-height: 120%;
+            margin-bottom: 1rem;
+        }
+        .media-meta {
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+        }
+        .media-desc {
+            line-height: 161.8%;
+            max-width: 40rem;
+        }
+    }
+    .footer {
+        display: inherit;
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+    .actions {
+        @extend %flex;
+        flex-direction: row;
+        align-items: center;
+        > .play {
+            display: inherit;
+            flex-direction: row;
+            align-items: inherit;
+            font-weight: 700;
+            text-transform: uppercase;
+            > svg {
+                height: 3rem;
+                width: 3rem;
+                margin-right: 0.5rem;  
+            }
+        }
+        .buttons {
+            > svg {
+                margin-left: 0.5rem;
+            }
+        }
+    }
+}
+

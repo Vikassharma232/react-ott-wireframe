@@ -1,0 +1,10 @@
+@import '../../scss/globals/all.scss';
+
+.svg-button-live {
+    > g {
+        stroke: $primaryColor;
+    }
+    > path {
+        fill: $primaryColor;
+    }
+}

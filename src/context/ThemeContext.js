@@ -6,7 +6,7 @@ export class ThemeContextProvider extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            selectedTheme: 'mediastream',
+            selectedTheme: 'default',
         }
     }
 

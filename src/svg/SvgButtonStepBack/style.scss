@@ -1,0 +1,10 @@
+@import '../../scss/globals/all.scss';
+
+.svg-button-step-back {
+    > g {
+        stroke: $primaryColor;
+    }
+    > path {
+        fill: $primaryColor;
+    }
+}

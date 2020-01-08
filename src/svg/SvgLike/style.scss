@@ -1,0 +1,10 @@
+@import '../../scss/globals/all.scss';
+
+.svg-like {
+    > g path:nth-child(2) {
+        fill: $primaryColor;
+    } 
+    > path {
+        fill: $primaryColor;
+    }
+}
