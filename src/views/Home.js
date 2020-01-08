@@ -1,7 +1,8 @@
 import React from 'react';
+import SampleComponent from '../components/SampleComponent';
 
 export default function Home() {
     return (
-        <h1>Este es el home</h1>
+        <SampleComponent/>
     )
 }
