@@ -1,0 +1,132 @@
+@import '../../scss/globals/all.scss';
+
+.container {
+	background: #BEBEBE;
+	width: 100%;
+	padding: 1rem;
+	box-sizing: border-box;
+	@include flexbox;
+	.container-media{
+		position: relative;
+		border: 2px solid transparent;
+		width: 33%;
+		margin: 0 auto;
+		transition: all .2s;
+		cursor: pointer;
+		.media-body{
+			position: relative;
+			.media-img{
+				@include aspect-ratio(16, 9);
+				background: #575757;
+				.play-icon{
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+				}
+				.overlay{
+					position: absolute;
+					top: 0;
+					left: 0;
+					right: 0;
+					bottom: 0;
+					background: rgba(0,0,0,0.3);
+				}
+				img{
+					width: 100%;
+				}
+			
+			}
+			.container-info{
+				position: absolute;
+				bottom: 0.9rem;
+				width: 100%;
+				padding: 0 0.9rem;
+				box-sizing: border-box;
+				.media-subtitle{
+					h2{
+						color: #fff;
+						opacity: 0.7;
+						font-size: 0.9rem;
+					}
+				}
+				.media-title{
+					margin: 0.4rem 0;
+					h1{
+						color: #fff;
+						font-size: 1.4rem;
+					}
+				}
+				.media-tag{
+					h4{
+						color: #fff;
+						opacity: 0.7;
+						font-size: 0.8rem;
+					}
+				}
+				.network-logo{
+					text-align: right;
+					p{
+						color: #fff;
+						font-size: 0.8rem;
+					}
+				}
+			}
+		}
+		.media-info{
+			background: #666666;
+			padding: 1rem 1.5rem;
+			visibility: hidden;
+			.media-tag{
+				h4{
+					color: #fff;
+					opacity: 0.7;
+					font-size: 0.8rem;
+				}
+			}
+			.media-description{
+				color: #fff;
+				margin: 0.5rem 0;
+				p{
+					font-size: 0.8rem;
+					@include ellipsis(2);
+				}
+			}
+			.actions{
+				@include flexbox;
+				@include justify-content(space-between);
+				@include align-items(center);
+				padding: 0.5rem 0;
+				ul{
+					@include flexbox;
+					li{
+						margin: 0 0.2rem;
+						&:first-child{
+							margin-left: 0;
+						}
+					}
+				}
+				.network-logo{
+					text-align: right;
+					p{
+						color: #fff;
+						font-size: 0.8rem;
+					}
+				}
+			}
+		}
+		&:hover{
+			transform: scale(1.06);
+			z-index: 2;
+			.container-info{
+				.media-tag, .network-logo{
+					display: none;
+				}
+			}
+			.media-info{
+				visibility: visible;
+			}
+		}
+	}
+}
+
