@@ -1,0 +1,115 @@
+@import '../../scss/globals/all.scss';
+
+
+
+.container-media-related{
+	position: relative;
+	border: 2px solid transparent;
+	cursor: pointer;
+	width: 15%;
+	.media-body{
+		position: relative;
+		.overlay{
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background: rgba(0,0,0,0.3);
+			z-index: 1;
+		}
+		.icon{
+			display: none;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			z-index: 2;
+		}
+		.media-img{
+			@include aspect-ratio(16,9);
+			img{
+				width: 100%;
+			}
+		}
+		.network-logo{
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			padding: 0.5rem;
+			z-index: 2;
+			p{
+				color: #fff;
+			}
+		}
+	}
+	.media-footer{
+		padding: 0.5rem 0.2rem;
+		.media-title{
+			h1{
+				color: #fff;
+				font-size: 1.3rem;
+				margin: 0.5rem 0;
+			}
+		}
+		.media-tag{
+			display: none;
+			h4{
+				color: #fff;
+				opacity: 0.7;
+				font-size: 0.8rem;
+			}
+		}
+		.media-description{
+			display: none;
+			margin: 0.5rem 0;
+			p{
+				color: #fff;
+				font-size: 0.8rem;
+				@include ellipsis(4);
+			}
+		}
+		.actions{
+			display: none;
+			ul{
+				@include flexbox;
+				li{
+					margin: 0 0.2rem;
+					&:first-child{
+						margin-left: 0;
+					}
+				}
+			}
+		}
+	}
+	&:hover{
+		.media-body{
+			.icon{
+				display: block;
+			}
+		}
+		.media-footer{
+			background: #fff;
+			.media-title{
+				h1{
+					color: grey;
+				}
+			}
+			.media-tag{
+				display: block;
+				h4{
+					color: gray;
+				}
+			}
+			.media-description{
+				display: block;
+				p{
+					color: grey;
+				}
+			}
+			.actions{
+				display: block;
+			}
+		}
+	}
+}
