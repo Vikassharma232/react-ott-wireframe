@@ -1,10 +1,9 @@
 import React from 'react';
 import './style.scss';
-import SvgButtonDetails from '../../svg/SvgButtonDetails';
-import SvgButtonAdd from '../../svg/SvgButtonAdd';
-import SvgLike from '../../svg/SvgLike';
-import SvgDislike from '../../svg/SvgDislike';
-import SvgPlayFilled from '../../svg/SvgPlayFilled';
+import IcoButton from '../IcoButton';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlayCircle } from '@fortawesome/pro-solid-svg-icons';
+import { faArrowRight, faHeart } from '@fortawesome/pro-light-svg-icons';
 
 export default function Hero(props) {
     return (
@@ -29,14 +28,12 @@ export default function Hero(props) {
             <div className="footer">
                 <div className="actions">
                     <div className="play">
-                        <SvgPlayFilled />
+                        <FontAwesomeIcon icon={faPlayCircle} className="icon"/>
                         <p>Start Watching</p>
                     </div>
                     <div className="buttons">
-                        <SvgButtonDetails />
-                        <SvgButtonAdd />
-                        <SvgLike />
-                        <SvgDislike />
+                        <IcoButton icon={faArrowRight}/>
+                        <IcoButton icon={faHeart}/>
                     </div>
                 </div>
                 <div className="network-logo">

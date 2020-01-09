@@ -1,0 +1,25 @@
+@import '../../scss/globals/all';
+
+.ico-button {
+    --size: 50rem;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    position: relative;
+    transition: ease-in 150ms;
+    > svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .fa-ico {
+        --ico-size: 60%;
+        width: var(--ico-size);
+        height: var(--ico-size);
+        margin: 20%;
+    }
+    &:hover {
+        @include scale(1.2);
+        cursor: pointer;
+    }
+}
