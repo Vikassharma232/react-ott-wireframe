@@ -3,7 +3,13 @@ import './style.scss';
 
 export default function SvgButtonDetails(props) {
     return (
-        <svg className="svg-button-details" width="2rem" height="2rem" viewBox="0 0 32 32" >
+        <svg 
+            className="svg-button-details" 
+            width={props.size ? props.size : '2rem'} 
+            height={props.size ? props.size : '2rem'} 
+            viewBox="0 0 32 32" 
+            {...props}
+        >
             <path
                 d="M16 1C11.993 1 8.227 2.56 5.393 5.393A14.902 14.902 0 001 16c0 4.007 1.56 7.773 4.393 10.607A14.902 14.902 0 0016 31c4.007 0 7.773-1.56 10.607-4.393A14.902 14.902 0 0031 16c0-4.007-1.56-7.773-4.393-10.607A14.902 14.902 0 0016 1m0-1c8.837 0 16 7.163 16 16s-7.163 16-16 16S0 24.837 0 16 7.163 0 16 0z"
             />

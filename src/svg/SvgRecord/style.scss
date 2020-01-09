@@ -1,0 +1,10 @@
+@import '../../scss/globals/all.scss';
+
+.svg-record {
+    > g {
+        stroke: $primaryColor;
+    }
+    > circle {
+        fill: $primaryColor;
+    }
+}

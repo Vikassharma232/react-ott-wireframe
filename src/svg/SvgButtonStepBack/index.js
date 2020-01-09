@@ -3,7 +3,12 @@ import './style.scss';
 
 export default function SvgButtonStepBack(props) {
     return (
-        <svg className="svg-button-step-back" width="2em" height="2em" viewBox="0 0 32 32">
+        <svg 
+            className="svg-button-step-back" 
+            width={props.size ? props.size : '2rem'} 
+            height={props.size ? props.size : '2rem'} 
+            viewBox="0 0 32 32"
+        >
             <g data-name="Elipse 11" fill="none">
                 <circle cx={16} cy={16} r={16} stroke="none" />
                 <circle cx={16} cy={16} r={15.5} />
