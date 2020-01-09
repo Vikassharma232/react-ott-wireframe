@@ -3,7 +3,12 @@ import './style.scss';
 
 export default function SvgDislike(props) {
     return (
-        <svg className="svg-dislike" width="2rem" height="2rem" viewBox="0 0 32 32">
+        <svg 
+            className="svg-dislike" 
+            width={props.size ? props.size : '2rem'} 
+            height={props.size ? props.size : '2rem'} 
+            viewBox="0 0 32 32"
+        >
             <g fill="none" stroke="#fff">
                 <circle cx={16} cy={16} r={16} stroke="none" />
                 <circle cx={16} cy={16} r={15.5} />

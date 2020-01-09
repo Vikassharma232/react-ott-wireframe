@@ -3,7 +3,12 @@ import './style.scss';
 
 export default function SvgLike(props) {
     return (
-        <svg className="svg-like" width="2rem" height="2rem" viewBox="0 0 32 32">
+        <svg 
+            className="svg-like" 
+            width={props.size ? props.size : '2rem'} 
+            height={props.size ? props.size : '2rem'} 
+            viewBox="0 0 32 32"
+        >
             <g fill="none">
                 <path d="M16 0A16 16 0 110 16 16 16 0 0116 0z" />
                 <path

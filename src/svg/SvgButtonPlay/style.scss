@@ -1,0 +1,11 @@
+@import '../../scss/globals/all.scss';
+
+.svg-button-play {
+    > path {
+        fill: $primaryColor;
+    }
+    > g {
+        fill: fade($black, -0.5);
+        stroke: $primaryColor;
+    }
+}

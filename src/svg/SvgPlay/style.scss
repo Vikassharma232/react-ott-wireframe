@@ -1,0 +1,13 @@
+@import '../../scss/globals/all.scss';
+
+.svg-button-add {
+    > g path:nth-child(2) {
+        $attr: (
+            'fill': 'primaryColor'
+        );
+        @include themeBuilder($attr);
+    }
+    > path {
+        fill: $primaryColor;
+    }
+}
